@@ -1,7 +1,9 @@
 import 'package:babysleep/model/sounds.dart';
-import 'package:babysleep/utils/animals_data.dart';
+import 'package:babysleep/utils/white_noise.dart';
+import 'package:babysleep/utils/cars.dart';
 import 'package:babysleep/utils/home_tools_data.dart';
 import 'package:babysleep/utils/nature.dart';
+import 'package:babysleep/utils/ninnis.dart';
 
 List<Sound> homeHazirla() {
   List<Sound> sounds = [];
@@ -11,7 +13,6 @@ List<Sound> homeHazirla() {
       HomeTools.SES_NAME[i],
       HomeTools.SES_ICON_PATH[i],
       HomeTools.SES_PATH[i],
-
     );
     sounds.add(eklenecekSound);
   }
@@ -19,21 +20,21 @@ List<Sound> homeHazirla() {
   return sounds;
 }
 
-List<Sound> animalsHazirla() {
-  List<Sound> animals = [];
+List<Sound> whitesHazirla() {
+  List<Sound> whites = [];
 
-  for (int i = 0; i < Animals.SES_NAME.length; i++) {
+  for (int i = 0; i < Whites.SES_NAME.length; i++) {
     Sound eklenecekSound = Sound(
-      Animals.SES_NAME[i],
-      Animals.SES_ICON_PATH[i],
-      Animals.SES_PATH[i],
-
+      Whites.SES_NAME[i],
+      Whites.SES_ICON_PATH[i],
+      Whites.SES_PATH[i],
     );
-    animals.add(eklenecekSound);
+    whites.add(eklenecekSound);
   }
 
-  return animals;
+  return whites;
 }
+
 List<Sound> natureHazirla() {
   List<Sound> nature = [];
 
@@ -42,10 +43,38 @@ List<Sound> natureHazirla() {
       Nature.SES_NAME[i],
       Nature.SES_ICON_PATH[i],
       Nature.SES_PATH[i],
-
     );
     nature.add(eklenecekSound);
   }
 
   return nature;
+}
+
+List<Sound> carsHazirla() {
+  List<Sound> cars = [];
+
+  for (int i = 0; i < Cars.SES_NAME.length; i++) {
+    Sound eklenecekSound = Sound(
+      Cars.SES_NAME[i],
+      Cars.SES_ICON_PATH[i],
+      Cars.SES_PATH[i],
+    );
+    cars.add(eklenecekSound);
+  }
+  return cars;
+}
+
+List<Sound> ninnisHazirla() {
+  List<Sound> ninnis = [];
+
+  for (int i = 0; i < Ninni.SES_NAME.length; i++) {
+    Sound eklenecekSound = Sound(
+      Ninni.SES_NAME[i],
+      Ninni.SES_ICON_PATH[i],
+      Ninni.SES_PATH[i],
+    );
+    ninnis.add(eklenecekSound);
+  }
+
+  return ninnis;
 }

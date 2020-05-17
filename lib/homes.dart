@@ -1,9 +1,11 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:babysleep/model/sounds.dart';
 import 'package:babysleep/prepare/prepare.dart';
+import 'package:babysleep/ui/color.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 class HomeaPage extends StatefulWidget {
   @override
@@ -12,27 +14,22 @@ class HomeaPage extends StatefulWidget {
 
 class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
   List<TabItem> tabItems = List.of([
-    new TabItem(Icons.trip_origin, "Anasayfa", Colors.blue),
-    new TabItem(Icons.add_circle, "Akrababa", Colors.green),
-    new TabItem(Icons.grain, "Müzik Ara", Colors.orange),
-    new TabItem(Icons.layers, "Kitaplık", Colors.red),
-    new TabItem(Icons.library_music, "Hit Müzik", Colors.yellow),
+    new TabItem(Icons.trip_origin, "Ninni", Colors.blue),
+    new TabItem(Icons.add_circle, "Home Tools", Colors.green),
+    new TabItem(Icons.grain, "White Noise", Colors.orange),
+    new TabItem(Icons.layers, "Cars", Colors.red),
+    new TabItem(Icons.library_music, "Nature", Colors.yellow),
   ]);
 
-  final List<Color> colors = <Color>[
-    Colors.red,
-    Colors.blue,
-    Colors.green,
-    Colors.yellow,
-    Colors.orange
-  ];
+
 
   int seciliPozisyon = 2;
   CircularBottomNavigationController _navigationController;
-  @override
-  TabController controller;
-  TabController controller2;
-  TabController controller3;
+  TabController controllerNinni;
+  TabController controllerNature;
+  TabController controllerHome;
+  TabController controllerCars;
+  TabController controllerWhite;
 
   @override
   void setState(fn) {
@@ -46,9 +43,11 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
     super.initState();
     _navigationController =
         new CircularBottomNavigationController(seciliPozisyon);
-    controller = new TabController(vsync: this, length: 3);
-    controller2 = new TabController(vsync: this, length: 5);
-    controller3 = new TabController(vsync: this, length: 5);
+    controllerNinni = new TabController(vsync: this, length: 3);
+    controllerNature = new TabController(vsync: this, length: 5);
+    controllerHome = new TabController(vsync: this, length: 3);
+    controllerCars = new TabController(vsync: this, length: 4);
+    controllerWhite = new TabController(vsync: this, length: 1);
   }
 
   @override
@@ -57,21 +56,24 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
   }
 
   static List<Sound> homeTools;
-  static List<Sound> animals;
+  static List<Sound> ninnis;
+  static List<Sound> whites;
   static List<Sound> natures;
+  static List<Sound> cars;
   var arda = "baaykemal";
   var renk;
   var sesAcik = 0;
   var _value = 1.0;
   final ses = AssetsAudioPlayer();
-  List expanded = [1, 1, 1, 1, 1, 1, 1, 1];
 
   @override
   Widget build(BuildContext context) {
     ses.loop = true;
     homeTools = homeHazirla();
-    animals = animalsHazirla();
+    whites = whitesHazirla();
     natures = natureHazirla();
+    ninnis = ninnisHazirla();
+    cars = carsHazirla();
     return Scaffold(
       endDrawer: drawerGetir(),
       drawer: drawerGetir(),
@@ -125,19 +127,44 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
   seciliContainer() {
     switch (seciliPozisyon) {
       case 0:
-        return controller;
+        controllerHome.index = 0;
+        controllerCars.index = 0;
+        controllerNature.index = 0;
+        controllerWhite.index = 0;
+
+        return controllerNinni;
         break;
       case 1:
-        return controller2;
+        controllerNinni.index = 0;
+        controllerCars.index = 0;
+        controllerNature.index = 0;
+        controllerWhite.index = 0;
+
+        return controllerHome;
         break;
       case 2:
-        return controller3;
+        controllerHome.index = 0;
+        controllerNinni.index = 0;
+        controllerNature.index = 0;
+        controllerCars.index = 0;
+
+        return controllerWhite;
         break;
       case 3:
-        return controller2;
+        controllerHome.index = 0;
+        controllerNinni.index = 0;
+        controllerNature.index = 0;
+        controllerWhite.index = 0;
+
+        return controllerCars;
         break;
       case 4:
-        return controller2;
+        controllerHome.index = 0;
+        controllerNinni.index = 0;
+        controllerCars.index = 0;
+        controllerWhite.index = 0;
+
+        return controllerNature;
         break;
     }
   }
@@ -146,19 +173,19 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
     String slogan;
     switch (seciliPozisyon) {
       case 0:
-        return bodypage();
+        return ninnisPage();
         break;
       case 1:
-        return bodypage1();
+        return homeToolsPage();
         break;
       case 2:
-        return bodypage2();
+        return whitesPage();
         break;
       case 3:
-        slogan = "Hit Müzikler";
+        return carsPage();
         break;
       case 4:
-        slogan = "Hit Müzikler";
+        return naturesPage();
         break;
     }
     return Center(
@@ -166,15 +193,15 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
     );
   }
 
-  bodypage() {
+  ninnisPage() {
     return DefaultTabController(
-        length: 3,
+        length: ninnis.length,
         child: Builder(
           builder: (BuildContext context) => Padding(
             padding: EdgeInsets.all(0),
             child: TabBarView(
-              controller: controller,
-              children: new List<Widget>.generate(animals.length, (index) {
+              controller: controllerNinni,
+              children: new List<Widget>.generate(ninnis.length, (index) {
                 return new GridTile(
                   child: GestureDetector(
                     onTap: () {
@@ -182,15 +209,14 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
                         arda = "arnana";
                         ses.isPlaying.value
                             ? ses.pause()
-                            : ses
-                                .open(Audio(animals[index].sesPath.toString()));
+                            : ses.open(Audio(ninnis[index].sesPath.toString()));
                         ses.isPlaying.value ? sesAcik = 0 : sesAcik = 1;
                       });
                     },
                     child: Container(
                       margin: EdgeInsets.all(0),
                       padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                      decoration: BoxDecoration(color: colors[index]),
+                      decoration: BoxDecoration(color: colors[index+1]),
                       child: new Center(
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -202,7 +228,7 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
                                     ? MediaQuery.of(context).size.width / 5
                                     : MediaQuery.of(context).size.width / 2,
                                 child: new Image.asset(
-                                    animals[index].sesIconPath.toString()),
+                                    ninnis[index].sesIconPath.toString()),
                               ),
                               Divider(
                                 height: 25,
@@ -231,14 +257,14 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
         ));
   }
 
-  bodypage1() {
+  homeToolsPage() {
     return DefaultTabController(
         length: 3,
         child: Builder(
           builder: (BuildContext context) => Padding(
             padding: EdgeInsets.all(0),
             child: TabBarView(
-              controller: controller2,
+              controller: controllerHome,
               children: new List<Widget>.generate(homeTools.length, (index) {
                 return new GridTile(
                   child: GestureDetector(
@@ -296,14 +322,14 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
         ));
   }
 
-  bodypage2() {
+  naturesPage() {
     return DefaultTabController(
         length: natures.length,
         child: Builder(
           builder: (BuildContext context) => Padding(
             padding: EdgeInsets.all(0),
             child: TabBarView(
-              controller: controller3,
+              controller: controllerNature,
               children: new List<Widget>.generate(natures.length, (index) {
                 return new GridTile(
                   child: GestureDetector(
@@ -345,6 +371,134 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
                                       : Icons.pause_circle_outline,
                                   size: MediaQuery.of(context).orientation ==
                                           Orientation.landscape
+                                      ? 40
+                                      : 55,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ]),
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
+          ),
+        ));
+  }
+  whitesPage() {
+    return DefaultTabController(
+        length: whites.length,
+        child: Builder(
+          builder: (BuildContext context) => Padding(
+            padding: EdgeInsets.all(0),
+            child: TabBarView(
+              controller: controllerWhite,
+              children: new List<Widget>.generate(whites.length, (index) {
+                return new GridTile(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        arda = "arnana";
+                        ses.isPlaying.value
+                            ? ses.pause()
+                            : ses
+                                .open(Audio(whites[index].sesPath.toString()));
+                        ses.isPlaying.value ? sesAcik = 0 : sesAcik = 1;
+                      });
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(0),
+                      padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                      decoration: BoxDecoration(color: colors[index+2]),
+                      child: new Center(
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: MediaQuery.of(context).orientation ==
+                                        Orientation.landscape
+                                    ? MediaQuery.of(context).size.width / 5
+                                    : MediaQuery.of(context).size.width / 2,
+                                child: new Image.asset(
+                                    whites[index].sesIconPath.toString()),
+                              ),
+                              Divider(
+                                height: 25,
+                                color: Color.fromARGB(0, 0, 0, 0),
+                              ),
+                              Container(
+                                child: Icon(
+                                  sesAcik == 0
+                                      ? Icons.play_circle_outline
+                                      : Icons.pause_circle_outline,
+                                  size: MediaQuery.of(context).orientation ==
+                                          Orientation.landscape
+                                      ? 40
+                                      : 55,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ]),
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
+          ),
+        ));
+  }
+
+  carsPage() {
+    return DefaultTabController(
+        length: cars.length,
+        child: Builder(
+          builder: (BuildContext context) => Padding(
+            padding: EdgeInsets.all(0),
+            child: TabBarView(
+              controller: controllerCars,
+              children: new List<Widget>.generate(cars.length, (index) {
+                return new GridTile(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        arda = "arnana";
+                        ses.isPlaying.value
+                            ? ses.pause()
+                            : ses.open(Audio(cars[index].sesPath.toString()));
+                        ses.isPlaying.value ? sesAcik = 0 : sesAcik = 1;
+                      });
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(0),
+                      padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                      decoration: BoxDecoration(color: colors[index+3]),
+                      child: new Center(
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: MediaQuery.of(context).orientation ==
+                                    Orientation.landscape
+                                    ? MediaQuery.of(context).size.width / 5
+                                    : MediaQuery.of(context).size.width / 2,
+                                child: new Image.asset(
+                                    cars[index].sesIconPath.toString()),
+                              ),
+                              Divider(
+                                height: 25,
+                                color: Color.fromARGB(0, 0, 0, 0),
+                              ),
+                              Container(
+                                child: Icon(
+                                  sesAcik == 0
+                                      ? Icons.play_circle_outline
+                                      : Icons.pause_circle_outline,
+                                  size: MediaQuery.of(context).orientation ==
+                                      Orientation.landscape
                                       ? 40
                                       : 55,
                                   color: Colors.white,
@@ -409,78 +563,55 @@ class _HomeaPageState extends State<HomeaPage> with TickerProviderStateMixin {
   }
 
   drawerGetir() {
-    return Drawer(
-      child: ListView(
-        children: <Widget>[
-          DrawerHeader(
-            child: Align(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(
-                    Icons.directions_car,
-                    color: Colors.white,
-                    size: 100.0,
-                  ),
-                  Text(
-                    "Kurnaz Nakliyat",
-                    style: TextStyle(color: Colors.white, fontSize: 25.0),
-                  ),
-                ],
+    return ClipPath(
+      clipper: OvalRightBorderClipper(),
+      child: Drawer(
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(
+              child: Align(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.directions_car,
+                      color: Colors.white,
+                      size: 100.0,
+                    ),
+                    Text(
+                      "Kurnaz Nakliyat",
+                      style: TextStyle(color: Colors.white, fontSize: 25.0),
+                    ),
+                  ],
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
               ),
             ),
-            decoration: BoxDecoration(
-              color: Colors.blue,
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Anasayfa'),
+              trailing: Icon(Icons.arrow_right),
+              onTap: () {
+                Navigator.pushNamed(context, "/");
+              },
             ),
-          ),
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Anasayfa'),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.pushNamed(context, "/");
-            },
-          ),
-          ExpansionTile(
-            leading: Icon(Icons.perm_device_information),
-            title: Text('Kurumsal'),
-            trailing: Icon(Icons.arrow_drop_down),
-            children: <Widget>[
-              ListTile(
-                title: Text('Biz Kimiz'),
-                trailing: Icon(Icons.arrow_right),
-                onTap: () {
-                  Navigator.pushNamed(context, "/bizkimiz");
-                },
-              ),
-              ListTile(
-                title: Text('Tarihçemiz'),
-                trailing: Icon(Icons.arrow_right),
-                onTap: () {
-                  Navigator.pushNamed(context, "/tarihcemiz");
-                },
-              ),
-              ListTile(
-                title: Text('Kurumsal'),
-                trailing: Icon(Icons.arrow_right),
-                onTap: () {
-                  Navigator.pushNamed(context, "/kurumsal");
-                },
-              ),
-            ],
-          ),
-          ListTile(
-            leading: Icon(Icons.local_laundry_service),
-            title: Text('Hizmetler'),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              setState(() {});
-            },
-          ),
-        ],
+            ListTile(
+              leading: Icon(Icons.local_laundry_service),
+              title: Text('Hizmetler'),
+              trailing: Icon(Icons.arrow_right),
+              onTap: () {
+                setState(() {});
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
+
+
 /*return Container(
         child:
         ListWheelScrollView(

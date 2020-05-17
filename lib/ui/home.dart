@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     homeTools = homeHazirla();
-    animals = animalsHazirla();
+    animals = whitesHazirla();
 
     return Scaffold(
 
