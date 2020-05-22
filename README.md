@@ -29,6 +29,11 @@ Google Play Link : https://play.google.com/store/apps
 
 App Store'da Yayınlanmamıştır.<br />
 
+## TODO
+- [ ] Simgeler Transparan Hale Getirilecek
+- [ ] Geri Sayım Eklenecek
+
+
 
 
 ## Uygulamadan Görüntüler - App Images
