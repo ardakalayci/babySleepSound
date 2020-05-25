@@ -1,7 +1,7 @@
 ![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
 
 # Bebek Uykusu
-[![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
+ [![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
 
 Bu uygulama dikkatle seçilmiş bebeklerin uyumasına yardımcı olacak sesler içermektedir ve farklı ninni seçeneklerine sahiptir.Bu uygulama kesinlikle İnternet bağlantısı gerektirmez, istediğiniz yerde evde işte uçakta her yerde elinizin altında.
 
