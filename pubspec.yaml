@@ -17,12 +17,30 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  liquid_progress_indicator: ^0.3.2
+  lite_rolling_switch: ^0.1.1
+  toggle_switch: ^0.1.4
   flutter_custom_clippers: ^1.1.1
   circular_bottom_navigation: ^1.0.1
-  assets_audio_player: ^1.4.3+3
+  assets_audio_player: ^1.4.7+4
   getflutter: ^1.0.11
+  intl_translation: ^0.17.5
+  flutter_localizations:
+    sdk: flutter
   flutter:
     sdk: flutter
+  flappy_translator:
+
+flappy_translator:
+  input_file_path: "test.csv"
+  output_dir: "lib"
+  file_name: "i18n"
+  class_name: "I18n"
+  delimiter: ","
+  start_index: 1
+  depend_on_context: true
+  use_single_quotes: false
+  replace_no_break_spaces: false
 
 
   # The following adds the Cupertino Icons font to your application.
