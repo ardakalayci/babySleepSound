@@ -1,8 +1,7 @@
 ![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
 
 # Bebek Uykusu
-[![Build Status - Cirrus][]][Build status]
-
+[![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
 Bu uygulama dikkatle seçilmiş bebeklerin uyumasına yardımcı olacak sesler içermektedir ve farklı ninni seçeneklerine sahiptir.Bu uygulama kesinlikle İnternet bağlantısı gerektirmez, istediğiniz yerde evde işte uçakta her yerde elinizin altında.
 
 Neden bu uygulamayı kullanmalısınız?
@@ -18,20 +17,20 @@ Hangi sesleri içeriyor ?
 Ve Daha Fazlası Uygulamanın İçinde Çok Yakında !
 
 ## Geliştirme Platform
-- Programlama Dili: Dart <br />
-- Framework : Google Flutter <br />
+-  Programlama Dili: Dart <br />
+-  Framework : Google Flutter <br />
 
 ## Google Play
 
-Google Play Link : https://play.google.com/store/apps
+Google Play Link : play.google.com/store/apps
 
 ## App Store
 
 App Store'da Yayınlanmamıştır.<br />
 
 ## TODO
-- [ ] Simgeler Transparan Hale Getirilecek
-- [ ] Geri Sayım Eklenecek
+-  [ ] Simgeler Transparan Hale Getirilecek
+-  [ ] Geri Sayım Eklenecek
 
 
 
@@ -42,8 +41,3 @@ App Store'da Yayınlanmamıştır.<br />
 	 width="160" height="300" /> 
 	 <img src="https://i.ibb.co/z7DdgrL/IMG-20200521-171040.jpg" 
 	 width="160" height="300" />  <img src="https://i.ibb.co/Kw9rVH7/IMG-20200521-171051.jpg" width="160" height="300" />
-
-
-
-[Build Status - Cirrus]: https://api.cirrus-ci.com/github/flutter/flutter.svg
-[Build status]: https://cirrus-ci.com/github/flutter/flutter/master
