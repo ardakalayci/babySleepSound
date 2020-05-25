@@ -1,4 +1,4 @@
-![Resim1](https://i.ibb.co/q0PmJLK/main.png)
+[![Resim1](https://i.ibb.co/q0PmJLK/main.png "Google Play Store")](https://play.google.com/store/apps/details?id=online.ardakalayci.babysleep&gl=TR)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d21c4c2859c04164b9666729bc41019b)](https://www.codacy.com/manual/klaycarda/babySleepSound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=klaycarda/babySleepSound&amp;utm_campaign=Badge_Grade)
 
@@ -24,7 +24,7 @@ Ve Daha Fazlası Uygulamanın İçinde Çok Yakında !
 
 ## Google Play
 
-Google Play Link : play.google.com/store/apps
+Google Play Store Link : [Bebek Uykusu Play Store](https://play.google.com/store/apps/details?id=online.ardakalayci.babysleep&gl=TR)
 
 ## App Store
 
