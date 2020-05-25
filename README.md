@@ -31,8 +31,11 @@ Google Play Link : play.google.com/store/apps
 App Store'da Yayınlanmamıştır.<br />
 
 ## TODO
+-   [x] Seslerdeki Takılmalar Giderilecek
 -   [ ] Simgeler Transparan Hale Getirilecek
--   [ ] Geri Sayım Eklenecek
+-   [x] Geri Sayım Eklenecek
+-   [ ] Uzak Doğu Dilleri Eklenecek
+-   [ ] White Noise Çeşitleri Arttırılacak
 
 ## Uygulamadan Görüntüler - App Images
 <img src="https://i.ibb.co/j6qQGg1/328811-PAIECF-51.png"
