@@ -1,16 +1,44 @@
-# babysleep
+![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
 
-Baby Sleep Sound
+# Bebek Uykusu
+ [![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
 
-## Getting Started
+Bu uygulama dikkatle seçilmiş bebeklerin uyumasına yardımcı olacak sesler içermektedir ve farklı ninni seçeneklerine sahiptir.Bu uygulama kesinlikle İnternet bağlantısı gerektirmez, istediğiniz yerde evde işte uçakta her yerde elinizin altında.
 
-This project is a starting point for a Flutter application.
+Neden bu uygulamayı kullanmalısınız?
 
-A few resources to get you started if this is your first Flutter project:
+✔ Bebeklerin uyumasını kolaylaştırır.
+✔ Bebeklerin ağlarken sakinleşmesini sağlar.
+✔ Sadece bebekler için değil yetişkinler içinde uygundur.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Hangi sesleri içeriyor ?
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+♪ Süpürge ♪ Saat ♪ Radyo ♪ Beyaz Gürültü ♪ Otomobil ♪ Otobüs ♪ Uçak ♪ Tren ♪ Ateş ♪ Yağmur ♪ Deniz-Dalga ♪ Orman Cıvıltısı
+
+Ve Daha Fazlası Uygulamanın İçinde Çok Yakında !
+
+## Geliştirme Platform
+-  Programlama Dili: Dart <br />
+-  Framework : Google Flutter <br />
+
+## Google Play
+
+Google Play Link : play.google.com/store/apps
+
+## App Store
+
+App Store'da Yayınlanmamıştır.<br />
+
+## TODO
+-  [ ] Simgeler Transparan Hale Getirilecek
+-  [ ] Geri Sayım Eklenecek
+
+
+
+
+## Uygulamadan Görüntüler - App Images
+<img src="https://i.ibb.co/MDjSrv9/IMG-20200521-171013.jpg"
+	width="160" height="300" />  <img src="https://i.ibb.co/QH0W824/IMG-20200521-171030.jpg" 
+	 width="160" height="300" /> 
+	 <img src="https://i.ibb.co/z7DdgrL/IMG-20200521-171040.jpg" 
+	 width="160" height="300" />  <img src="https://i.ibb.co/Kw9rVH7/IMG-20200521-171051.jpg" width="160" height="300" />
