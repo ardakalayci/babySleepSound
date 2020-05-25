@@ -1,6 +1,7 @@
 ![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
 
 # Bebek Uykusu
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63eb9625904349eba32b30bb3d2d3c17)](https://app.codacy.com/manual/klaycarda/babySleepSound?utm_source=github.com&utm_medium=referral&utm_content=klaycarda/babySleepSound&utm_campaign=Badge_Grade_Dashboard)
  [![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
 
 Bu uygulama dikkatle seçilmiş bebeklerin uyumasına yardımcı olacak sesler içermektedir ve farklı ninni seçeneklerine sahiptir.Bu uygulama kesinlikle İnternet bağlantısı gerektirmez, istediğiniz yerde evde işte uçakta her yerde elinizin altında.
