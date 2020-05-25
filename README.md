@@ -1,7 +1,8 @@
 ![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d21c4c2859c04164b9666729bc41019b)](https://www.codacy.com/manual/klaycarda/babySleepSound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=klaycarda/babySleepSound&amp;utm_campaign=Badge_Grade)
+
 # Bebek Uykusu
- [![Build Status](https://travis-ci.org/klaycarda/babySleepSound.svg?branch=master)](https://travis-ci.org/klaycarda/babySleepSound)
 
 Bu uygulama dikkatle seçilmiş bebeklerin uyumasına yardımcı olacak sesler içermektedir ve farklı ninni seçeneklerine sahiptir.Bu uygulama kesinlikle İnternet bağlantısı gerektirmez, istediğiniz yerde evde işte uçakta her yerde elinizin altında.
 
@@ -18,8 +19,8 @@ Hangi sesleri içeriyor ?
 Ve Daha Fazlası Uygulamanın İçinde Çok Yakında !
 
 ## Geliştirme Platform
--  Programlama Dili: Dart <br />
--  Framework : Google Flutter <br />
+-   Programlama Dili: Dart <br />
+-   Framework : Google Flutter <br />
 
 ## Google Play
 
@@ -30,11 +31,8 @@ Google Play Link : play.google.com/store/apps
 App Store'da Yayınlanmamıştır.<br />
 
 ## TODO
--  [ ] Simgeler Transparan Hale Getirilecek
--  [ ] Geri Sayım Eklenecek
-
-
-
+-   [ ] Simgeler Transparan Hale Getirilecek
+-   [ ] Geri Sayım Eklenecek
 
 ## Uygulamadan Görüntüler - App Images
 <img src="https://i.ibb.co/MDjSrv9/IMG-20200521-171013.jpg"
