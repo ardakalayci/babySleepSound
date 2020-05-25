@@ -1,4 +1,4 @@
-![Resim1](https://i.ibb.co/LQjFLjf/Ba-l-ks-z-1.png)
+![Resim1](https://i.ibb.co/q0PmJLK/main.png)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d21c4c2859c04164b9666729bc41019b)](https://www.codacy.com/manual/klaycarda/babySleepSound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=klaycarda/babySleepSound&amp;utm_campaign=Badge_Grade)
 
@@ -35,8 +35,8 @@ App Store'da Yayınlanmamıştır.<br />
 -   [ ] Geri Sayım Eklenecek
 
 ## Uygulamadan Görüntüler - App Images
-<img src="https://i.ibb.co/MDjSrv9/IMG-20200521-171013.jpg"
-	width="160" height="300" />  <img src="https://i.ibb.co/QH0W824/IMG-20200521-171030.jpg" 
-	 width="160" height="300" /> 
-	 <img src="https://i.ibb.co/z7DdgrL/IMG-20200521-171040.jpg" 
-	 width="160" height="300" />  <img src="https://i.ibb.co/Kw9rVH7/IMG-20200521-171051.jpg" width="160" height="300" />
+<img src="https://i.ibb.co/j6qQGg1/328811-PAIECF-51.png"
+	width="240" height="300" />  <img src="https://i.ibb.co/0BYFVbh/328811-PAIECF-511.png" 
+	 width="240" height="300" /> 
+	 <img src="https://i.ibb.co/KVpwYJ4/328811-PAIECF-5111.png" 
+	 width="240" height="300" />  <img src="https://i.ibb.co/tKnPxj9/328811-PAIECF-511111.png" width="240" height="300" />
